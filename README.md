@@ -1,3 +1,10 @@
+Grupo
+
+Natan Nunes Del Boni - 1999528
+Cristiano Moreira Jacobino - 1989094
+Alexsandher Angel - 1986097
+
+
 🅿️🚗 Controle de Estacionamento Inteligente
 
 Este projeto é um sistema minimalista e funcional para gerenciar e reportar o faturamento de um estacionamento. Desenvolvido em PHP puro com SQLite, ele é projetado para ser executado via linha de comando (CLI) para tarefas administrativas e via navegador para visualização de relatórios.
