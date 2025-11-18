@@ -1,4 +1,4 @@
-🅿️ Simple PHP Parking Lot Reporting System
+🅿️🚗 Controle de Estacionamento Inteligente
 
 Este projeto é um sistema minimalista e funcional para gerenciar e reportar o faturamento de um estacionamento. Desenvolvido em PHP puro com SQLite, ele é projetado para ser executado via linha de comando (CLI) para tarefas administrativas e via navegador para visualização de relatórios.
 
@@ -16,38 +16,34 @@ O cálculo da tarifa é feito por hora, com o tempo de permanência arredondado 
 
 O projeto adota uma estrutura plana para os scripts e uma organização básica para as configurações e o banco de dados.
 
-Arquivo/Pasta
-
-Propósito
-
 index.php
 
 Relatório Web: Ponto de entrada via navegador. Conecta ao DB, calcula o faturamento com tarifas hardcoded e renderiza o resultado em uma tabela HTML.
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 migrate.php
 
 Migração DB: Script CLI para criar as tabelas vehicles e parking_records no arquivo SQLite. Essencial para configurar o ambiente.
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 report.php
 
 Relatório CLI: Script CLI para gerar o mesmo relatório de faturamento, mas com saída formatada para o terminal (texto puro).
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 seed.php
 
 População de Dados (Seed): Script CLI para inserir dados de exemplo (veículos e registros de estacionamento) no banco de dados para testes.
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 composer.json
 
 Configuração do Composer. Define a dependência mínima do PHP (>=8.0) e configura o autoload para uma futura pasta src/.
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 database/
 
 Contém o arquivo do banco de dados database.sqlite.
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 vendor/
 
 Contém o autoloader e dependências do Composer.
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 ⚙️ Decisões Técnicas
 
 Simplicidade Monolítica: A lógica de conexão com o banco de dados (PDO), o cálculo de negócios (tarifas e tempo) e a apresentação (HTML ou CLI echo) estão contidas em arquivos de script únicos. Essa abordagem favorece a rapidez no desenvolvimento e a fácil compreensão.
